@@ -217,6 +217,7 @@ footer p {
     max-width: 1600px; /* Contenedor más ancho */
     margin: 0 auto;
     padding: 0 30px;
+    overflow-y: hidden;
 }
 
 /* Ajuste de las filas de servicios */
