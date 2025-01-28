@@ -72,32 +72,43 @@ footer p {
     height: 40px;
 }
 
-.navbar-nav .nav-link {
-    color: #333 !important;
+/* Navbar Links antes del scroll */
+.navbar-custom .navbar-nav .nav-link {
+    color: #ffffff !important; /* Links blancos por defecto */
     font-weight: 500;
     padding: 0.5rem 1rem !important;
     transition: all 0.3s ease;
     position: relative;
 }
 
-.navbar-nav .nav-link:hover {
-    color: #000 !important;
+.navbar-custom .navbar-nav .nav-link:hover {
+    color: rgba(255, 255, 255, 0.8) !important; /* Hover más suave */
 }
 
-.navbar-nav .nav-link::after {
+/* Línea bajo los links */
+.navbar-custom .navbar-nav .nav-link::after {
     content: '';
     position: absolute;
     width: 0;
     height: 2px;
     bottom: 0;
     left: 50%;
-    background-color: #333;
+    background-color: #ffffff; /* Línea blanca */
     transition: all 0.3s ease;
     transform: translateX(-50%);
 }
 
-.navbar-nav .nav-link:hover::after {
-    width: 70%;
+/* Navbar Links después del scroll (mantener los estilos originales) */
+.navbar-custom.scrolled .navbar-nav .nav-link {
+    color: #333 !important;
+}
+
+.navbar-custom.scrolled .navbar-nav .nav-link:hover {
+    color: #000 !important;
+}
+
+.navbar-custom.scrolled .navbar-nav .nav-link::after {
+    background-color: #333;
 }
 
 .navbar-toggler {
