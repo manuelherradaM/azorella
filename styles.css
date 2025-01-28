@@ -1,4 +1,7 @@
 /* Estilos personalizados */
+*{
+    overflow-x: hidden;
+}
 body {
     font-family: 'Roboto', sans-serif;
 }
