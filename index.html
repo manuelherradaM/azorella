@@ -7,6 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="./styles.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
  
@@ -55,9 +56,10 @@
    <!-- Nosotros -->
    <section id="nosotros" class="py-5 text-white container-nosotros">
     <div class="container">
-        <div class="row justify-content-center g-5"> <!-- Aumentado el gap entre elementos -->
-            <div class="col-md-5">
-                <div class="nosotrosletra text-center p-4 h-100"> <!-- Agregado padding y height -->
+        <div class="row justify-content-center g-5">
+            <!-- Visión -->
+            <div class="col-md-5 order-md-1 order-2" data-aos="fade-right">
+                <div class="nosotrosletra text-center p-4 h-100">
                     <div class="content-wrapper">
                         <h2 class="mb-4 display-6">Visión</h2>
                         <p class="lead">Construir una empresa sólida y confiable que sea un punto de apoyo para nuestros 
@@ -66,8 +68,9 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-5">
-                <div class="nosotrosletra text-center p-4 h-100"> <!-- Agregado padding y height -->
+            <!-- Misión -->
+            <div class="col-md-5 order-md-2 order-1" data-aos="fade-left">
+                <div class="nosotrosletra text-center p-4 h-100">
                     <div class="content-wrapper">
                         <h2 class="mb-4 display-6">Misión</h2>
                         <p class="lead">Brindar soluciones personalizadas y accesibles en servicios técnicos y 
@@ -84,10 +87,10 @@
     <!-- Servicios -->
     <section id="servicios" class="py-5">
         <div class="container px-4">
-            <h2 class="text-center mb-5 display-4">Nuestros Servicios</h2>
+            <h2 class="text-center mb-5 display-4" data-aos="fade-down">Nuestros Servicios</h2>
             
             <!-- Consultoría Empresarial -->
-            <div class="row align-items-center mb-5 service-row">
+            <div class="row align-items-center mb-5 service-row" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1500">
                 <div class="col-md-4 px-3 service-image">
                     <div class="image-wrapper">
                         <img src="./utils/IMG_0940.jpg" alt="Consultoría Empresarial" class="img-fluid rounded">
@@ -105,7 +108,7 @@
             </div>
             
             <!-- Mantenimiento Industrial -->
-            <div class="row align-items-center mb-5 service-row">
+            <div class="row align-items-center mb-5 service-row" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1500">
                 <div class="col-md-4 order-md-3 px-3 service-image">
                     <div class="image-wrapper">
                         <img src="./utils/arquitectura-y-diseno.webp" alt="Mantenimiento Industrial" class="img-fluid rounded">
@@ -123,7 +126,7 @@
             </div>
             
             <!-- Gestión de Proyectos -->
-            <div class="row align-items-center mb-5 service-row">
+            <div class="row align-items-center mb-5 service-row" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1500">
                 <div class="col-md-4 order-md-1 px-3 service-image">
                     <div class="image-wrapper">
                         <img src="./utils/developing-programmer-working-with-laptop.jpg" alt="Gestión de Proyectos" class="img-fluid rounded">
@@ -147,10 +150,10 @@
     <!-- Contacto -->
     <section id="contacto" class="py-5">
         <div class="container">
-            <h2 class="text-center mb-5 display-4">Contáctanos</h2>
+            <h2 class="text-center mb-5 display-4" data-aos="fade-down">Contáctanos</h2>
             <div class="row justify-content-center g-4">
                 <!-- Formulario -->
-                <div class="col-lg-6">
+                <div class="col-lg-6" data-aos="fade-right">
                     <div class="contact-form-wrapper">
                         <form class="contact-form" id="contactForm">
                             <input type="hidden" name="access_key" value="a06d6ef3-dd9b-4434-a94c-8daf7ee95fd6">
@@ -199,7 +202,7 @@
                 </div>
 
                 <!-- Información de Contacto -->
-                <div class="col-lg-4">
+                <div class="col-lg-4" data-aos="fade-left">
                     <div class="contact-info-wrapper">
                         <div class="contact-info-header">
                             <h3>Información de Contacto</h3>
@@ -255,5 +258,13 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./scripts.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+    </script>
 </body>
 </html>
