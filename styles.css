@@ -207,23 +207,90 @@ footer p {
     }
 }
 
+/* Contenedor principal de servicios */
 #servicios {
-    background: linear-gradient(to bottom, #f8f9fa, #ffffff);
-    position: relative;
-    padding: 6rem 0;
+    overflow-x: hidden; /* Prevenir scroll horizontal */
+    width: 100%;
 }
 
 #servicios .container {
-    max-width: 1200px; /* O el ancho que prefieras */
+    max-width: 1600px; /* Contenedor más ancho */
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 0 30px;
 }
 
+/* Ajuste de las filas de servicios */
 .service-row {
-    margin-right: 0;
-    margin-left: 0;
-    max-width: 100%;
-    gap: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 4rem 0;
+    gap: 3rem; /* Espacio entre elementos */
+    width: 100%;
+}
+
+/* Ajuste de las columnas */
+.service-image {
+    flex: 0 0 30%; /* Ancho fijo para imágenes */
+    max-width: 30%;
+}
+
+.separador {
+    flex: 0 0 5%; /* Ancho fijo para separador */
+    max-width: 5%;
+}
+
+.service-content {
+    flex: 0 0 30%; /* Ancho fijo para contenido */
+    max-width: 30%;
+}
+
+/* Contenido */
+.service-content .content-box {
+    padding: 2rem;
+    height: auto;
+    width: 100%;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    #servicios .container {
+        padding: 0 15px;
+    }
+
+    .service-row {
+        flex-direction: column;
+        gap: 2rem;
+        margin: 2rem 0;
+        padding: 0 1rem;
+    }
+
+    .service-image,
+    .service-content {
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .separador {
+        display: none;
+    }
+
+    .service-content .content-box {
+        padding: 1.5rem;
+        text-align: center;
+    }
+}
+
+/* Ajustes para pantallas extra grandes */
+@media (min-width: 1400px) {
+    #servicios .container {
+        padding: 0 60px; /* Más padding en pantallas grandes */
+    }
+    
+    .service-row {
+        gap: 4rem; /* Más espacio entre elementos en pantallas grandes */
+    }
 }
 
 /* Imágenes */
@@ -233,6 +300,8 @@ footer p {
     border-radius: 15px;
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: auto;
+    overflow: hidden;
 }
 
 .service-image .image-wrapper:hover {
@@ -244,8 +313,6 @@ footer p {
     width: 100%;
     height: 300px;
     object-fit: cover;
-    border-radius: 15px;
-    transition: transform 0.5s ease;
 }
 
 .service-image .image-wrapper:hover img {
@@ -264,47 +331,24 @@ footer p {
     margin: 0 3rem;
 }
 
-/* Contenido */
-.service-content {
-    padding: 0 2rem;
-}
-
-.service-content .content-box {
-    padding: 2.5rem;
-    margin: 0;
-    width: 100%;
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease;
-}
-
-.service-content .content-box:hover {
-    transform: translateY(-5px);
-}
-
-.service-title {
+/* Título principal */
+#servicios h2.display-4 {
     color: #333;
-    font-size: 1.8rem;
-    margin-bottom: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 3rem;
     position: relative;
     padding-bottom: 1rem;
 }
 
-.service-title::after {
+#servicios h2.display-4::after {
     content: '';
     position: absolute;
     bottom: 0;
-    left: 0;
-    width: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
     height: 3px;
     background: linear-gradient(90deg, #333 0%, rgba(51,51,51,0.5) 100%);
-}
-
-.service-description {
-    color: #666;
-    font-size: 1.1rem;
-    line-height: 1.8;
 }
 
 /* Título principal */
@@ -330,34 +374,38 @@ footer p {
 /* Responsividad */
 @media (max-width: 768px) {
     .service-row {
-        gap: 1rem;
+        flex-direction: column;
+        gap: 2rem;
     }
-    
-    .service-content, 
-    .service-image {
-        padding: 0 1rem;
-    }
-    
-    .separator-line {
-        margin: 0 1rem;
-    }
-    
-    .service-content .content-box {
-        margin-top: 2rem;
-        text-align: center;
-    }
-    
-    .service-title::after {
-        left: 50%;
-        transform: translateX(-50%);
-    }
-    
-    .service-image .image-wrapper {
-        margin-bottom: 2rem;
-    }
-    
+
     .service-image img {
         height: 250px;
+    }
+
+    .service-content .content-box {
+        padding: 1.5rem;
+        margin-top: 0;
+    }
+
+    .separator-line {
+        display: none; /* Ocultar separador en móvil */
+    }
+
+    /* Ajustar orden en móvil */
+    .service-image {
+        order: 1;
+    }
+    
+    .service-content {
+        order: 2;
+        padding: 0 1rem;
+    }
+}
+
+/* Ajustes para pantallas grandes */
+@media (min-width: 1200px) {
+    #servicios .container {
+        padding: 0 4rem; /* Más padding en los lados para centrar mejor */
     }
 }
 
