@@ -114,7 +114,7 @@ footer p {
 }
 
 #inicio {
-    background-image: url("/utils/inicio2.jpeg");
+    background-image: url("./utils/inicio.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -470,7 +470,7 @@ footer p {
 
 .container-nosotros {
     min-height: 80vh; /* Aumentado el alto mínimo */
-    background-image: url("/utils/nosotros0.jpg");
+    background-image: url("./utils/nosotros0.jpg");
     background-size: cover;
     background-position: center;
     background-attachment: fixed; /* Efecto parallax */
