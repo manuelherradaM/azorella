@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="./styles.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="preload" href="https://player.vimeo.com/video/1058198307" as="document">
 </head>
 <body>
  
@@ -50,7 +51,7 @@
     <section id="inicio" class="hero-section">
         <div class="video-overlay"></div>
         <div class="video-container">
-            <iframe src="https://player.vimeo.com/video/1058198307?background=1&autoplay=1&loop=1&byline=0&title=0&muted=1" 
+            <iframe src="https://player.vimeo.com/video/1058198307?background=1&autoplay=1&loop=1&byline=0&title=0&muted=1&controls=0&quality=720p&dnt=1" 
                     frameborder="0" 
                     allow="autoplay; fullscreen; picture-in-picture" 
                     style="position:absolute;top:0;left:0;width:100%;height:100%;" 
@@ -264,6 +265,13 @@
             <p>&copy; 2025 Azorella Spa. Todos los derechos reservados.</p>
         </div>
     </footer>
+
+    <!-- Agregar justo después del body -->
+    <div id="loader">
+        <h1 class="loader-title">Azorella</h1>
+        <div class="spinner"></div>
+        <p>Cargando...</p>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./scripts.js"></script>

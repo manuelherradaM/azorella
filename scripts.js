@@ -63,3 +63,23 @@ document.getElementById('contactForm').addEventListener('submit', async function
         }
     }
 });
+
+// Agregar al inicio de tu scripts.js
+window.addEventListener('load', function() {
+    const loader = document.getElementById('loader');
+    const videoIframe = document.querySelector('.video-container iframe');
+    
+    // Función para ocultar el loader
+    function hideLoader() {
+        loader.classList.add('loader-hidden');
+        setTimeout(function() {
+            loader.style.display = 'none';
+        }, 500);
+    }
+
+    // Escuchar cuando el video esté listo
+    videoIframe.addEventListener('load', hideLoader);
+    
+    // Backup por si algo falla (máximo 4 segundos)
+    setTimeout(hideLoader, 4000);
+});
